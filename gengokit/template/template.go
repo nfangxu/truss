@@ -453,8 +453,8 @@ var _bintree = &bintree{nil, map[string]*bintree{
 		}},
 	}},
 	"handlers": {nil, map[string]*bintree{
-		"handlers.gotemplate": {handlersHandlersGotemplate, map[string]*bintree{}},
-		"hooks.gotemplate": {handlersHooksGotemplate, map[string]*bintree{}},
+		"handlers.gotemplate":    {handlersHandlersGotemplate, map[string]*bintree{}},
+		"hooks.gotemplate":       {handlersHooksGotemplate, map[string]*bintree{}},
 		"middlewares.gotemplate": {handlersMiddlewaresGotemplate, map[string]*bintree{}},
 	}},
 	"svc": {nil, map[string]*bintree{
@@ -466,7 +466,7 @@ var _bintree = &bintree{nil, map[string]*bintree{
 				"client.gotemplate": {svcClientHttpClientGotemplate, map[string]*bintree{}},
 			}},
 		}},
-		"config.gotemplate": {svcConfigGotemplate, map[string]*bintree{}},
+		"config.gotemplate":    {svcConfigGotemplate, map[string]*bintree{}},
 		"endpoints.gotemplate": {svcEndpointsGotemplate, map[string]*bintree{}},
 		"server": {nil, map[string]*bintree{
 			"run.gotemplate": {svcServerRunGotemplate, map[string]*bintree{}},

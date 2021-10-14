@@ -8,8 +8,8 @@ import (
 	"strconv"
 	"strings"
 
-	log "github.com/sirupsen/logrus"
 	plugin "github.com/gogo/protobuf/protoc-gen-gogo/plugin"
+	log "github.com/sirupsen/logrus"
 )
 
 func init() {
