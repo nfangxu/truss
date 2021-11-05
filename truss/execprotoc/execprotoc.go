@@ -15,7 +15,7 @@ import (
 )
 
 var (
-	libPath = flag.String("lib", "", "The proto path of the project")
+	libPath = flag.StringSlice("lib", []string{}, "The proto path of the project")
 )
 
 // GeneratePBDotGo creates .pb.go files from the passed protoPaths and writes
@@ -109,7 +109,9 @@ func protoc(protoPaths, gopath []string, plugin string) error {
 	var cmdArgs []string
 
 	cmdArgs = append(cmdArgs, "--proto_path="+filepath.Dir(protoPaths[0]))
-	cmdArgs = append(cmdArgs, "--proto_path="+*libPath)
+	for _, s := range *libPath {
+		cmdArgs = append(cmdArgs, "--proto_path="+s)
+	}
 
 	for _, gp := range gopath {
 		cmdArgs = append(cmdArgs, "-I"+filepath.Join(gp, "src"))
