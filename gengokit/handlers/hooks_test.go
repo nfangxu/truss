@@ -6,9 +6,9 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/metaverse/truss/gengokit"
-	"github.com/metaverse/truss/gengokit/httptransport"
-	"github.com/metaverse/truss/svcdef"
+	"github.com/nfangxu/truss/gengokit"
+	"github.com/nfangxu/truss/gengokit/httptransport"
+	"github.com/nfangxu/truss/svcdef"
 
 	"github.com/pkg/errors"
 	"github.com/stretchr/testify/require"
@@ -55,8 +55,8 @@ func TestHooksAddingImport(t *testing.T) {
 	require.NoError(t, err)
 
 	conf := gengokit.Config{
-		GoPackage: "github.com/metaverse/truss/gengokit",
-		PBPackage: "github.com/metaverse/truss/gengokit/echo-service",
+		GoPackage: "github.com/nfangxu/truss/gengokit",
+		PBPackage: "github.com/nfangxu/truss/gengokit/echo-service",
 	}
 
 	te, err := gengokit.NewData(sd, conf)

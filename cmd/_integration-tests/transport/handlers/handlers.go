@@ -5,10 +5,11 @@ package handlers
 
 import (
 	"context"
-	"github.com/pkg/errors"
 	"net/http"
 
-	pb "github.com/metaverse/truss/cmd/_integration-tests/transport/proto"
+	"github.com/pkg/errors"
+
+	pb "github.com/nfangxu/truss/cmd/_integration-tests/transport/proto"
 )
 
 // NewService returns a naïve, stateless implementation of Service.
